@@ -1,0 +1,21 @@
+{
+  "name": "rails",
+  "dockerComposeFile": [
+    "./docker-compose.yml"
+  ],
+  "service": "rails",
+  "workspaceFolder": "/app",
+  "extensions": [
+    "rebornix.ruby",
+  ],
+  "settings": {
+    "editor.tabSize": 2,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "editor.formatOnSave": true,
+  }
+  // "postCreateCommand": "bundle install && yarn && rails db:create && rails db:migrate",
+  // コンテナ起動時に.envが無ければ .env.sample をコピーする
+  // "initializeCommand": "if [ ! -f .devcontainer/.env ];then cp .devcontainer/.env.sample .devcontainer/.env;fi",
+}
